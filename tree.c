@@ -207,7 +207,7 @@ int NodeDump (TreeNode_t* root, int* index, FILE* tree_dump)
         int left_node_id = NodeDump(root->left, index, tree_dump);
         fprintf (tree_dump, "%d->%d;\n", node_id, left_node_id);
     }
-    if (root->left)
+    if (root->right)
     {
         int right_node_id = NodeDump(root->right, index, tree_dump);
         fprintf (tree_dump, "%d->%d;\n", node_id, right_node_id);
